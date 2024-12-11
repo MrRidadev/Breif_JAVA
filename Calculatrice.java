@@ -15,6 +15,9 @@ public class Calculatrice {
     static void Soustraction(double a ,double b){
         System.out.println("la Soustraction de A et B :"+(a-b));
     }
+    static void Multiplication (double a ,double b){
+        System.out.println("la Soustraction de A et B :"+(a * b));
+    }
     static void Menu(){
         System.out.println("======== MENU ==========");
         System.out.println("1. Addition (+)");
@@ -43,6 +46,11 @@ double x,y;
                 x=saisie();
                 y=saisie();
                 Soustraction(x,y);
+                break;
+            case 3 :
+                x=saisie();
+                y=saisie();
+                Multiplication(x,y);
                 break;
 
             case 8:
