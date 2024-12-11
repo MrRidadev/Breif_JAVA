@@ -2,19 +2,18 @@ import java.util.Scanner;
 
 public class Calculatrice {
     double a,  b;
-    static void Addition(){
+    static double saisie(){
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Entre valeur A:");
+        System.out.print("Entre valeur :");
         double a = sc.nextDouble();
-
-        System.out.print("Entre valeur B:");
-        double b = sc.nextDouble();
-
-
-
+        return a;
+    }
+    static void Addition(double a ,double b ){
 
         System.out.println("la some de A et B :"+(a+b));
+    }
+    static void Soustraction(double a ,double b){
+        System.out.println("la Soustraction de A et B :"+(a-b));
     }
     static void Menu(){
         System.out.println("======== MENU ==========");
@@ -25,9 +24,10 @@ public class Calculatrice {
         System.out.println("5. Puissance");
         System.out.println("6. Racine carrée");
         System.out.println("7. Factorielle");
+        System.out.println("8. Quttter");
     }
     public static void main(String[] args){
-
+double x,y;
         Menu();
         Scanner scanner = new Scanner(System.in);
 
@@ -35,9 +35,21 @@ public class Calculatrice {
         int choix = scanner.nextInt();
         switch (choix){
             case 1 :
-                Addition();
+                x=saisie();
+                y=saisie();
+                Addition(x,y);
+                break;
+            case 2 :
+                x=saisie();
+                y=saisie();
+                Soustraction(x,y);
                 break;
 
+            case 8:
+                System.out.println("au revoir !!");
+                break;
+            default:
+                System.out.println("choix invaible !!");
         }
         scanner.close();
     }
