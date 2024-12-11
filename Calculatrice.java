@@ -21,6 +21,10 @@ public class Calculatrice {
     static void Division (double a,double b){
         System.out.println("la Division de A et B :"+(a / b));
     }
+    static  double Puissance(double a, double b){
+        System.out.println("la Puissance de A et B :"+Math.pow( a, b));
+        return Math.pow( a, b);
+    }
     static void Menu(){
         System.out.println("======== MENU ==========");
         System.out.println("1. Addition (+)");
@@ -59,6 +63,11 @@ double x,y;
                 x=saisie();
                 y=saisie();
                 Division(x,y);
+                break;
+            case 5 :
+                x=saisie();
+                y=saisie();
+                Puissance(x,y);
                 break;
 
             case 8:
