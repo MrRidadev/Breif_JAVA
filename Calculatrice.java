@@ -16,7 +16,10 @@ public class Calculatrice {
         System.out.println("la Soustraction de A et B :"+(a-b));
     }
     static void Multiplication (double a ,double b){
-        System.out.println("la Soustraction de A et B :"+(a * b));
+        System.out.println("la Multiplication de A et B :"+(a * b));
+    }
+    static void Division (double a,double b){
+        System.out.println("la Division de A et B :"+(a / b));
     }
     static void Menu(){
         System.out.println("======== MENU ==========");
@@ -51,6 +54,11 @@ double x,y;
                 x=saisie();
                 y=saisie();
                 Multiplication(x,y);
+                break;
+            case 4 :
+                x=saisie();
+                y=saisie();
+                Division(x,y);
                 break;
 
             case 8:
