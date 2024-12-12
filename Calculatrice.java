@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Calculatrice {
-    double a,  b;
     static double saisie(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Entre valeur :");
@@ -25,6 +24,10 @@ public class Calculatrice {
         System.out.println("la Puissance de A et B :"+Math.pow( a, b));
         return Math.pow( a, b);
     }
+    static  double RacineCarrée(double a){
+        System.out.println("la Racine carrée de A et B :"+Math.sqrt( a));
+        return Math.sqrt( a);
+    }
     static void Menu(){
         System.out.println("======== MENU ==========");
         System.out.println("1. Addition (+)");
@@ -38,44 +41,51 @@ public class Calculatrice {
     }
     public static void main(String[] args){
 double x,y;
-        Menu();
-        Scanner scanner = new Scanner(System.in);
+ int choix;
+do {
+    Menu();
+    Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Entre choix:");
-        int choix = scanner.nextInt();
-        switch (choix){
-            case 1 :
-                x=saisie();
-                y=saisie();
-                Addition(x,y);
-                break;
-            case 2 :
-                x=saisie();
-                y=saisie();
-                Soustraction(x,y);
-                break;
-            case 3 :
-                x=saisie();
-                y=saisie();
-                Multiplication(x,y);
-                break;
-            case 4 :
-                x=saisie();
-                y=saisie();
-                Division(x,y);
-                break;
-            case 5 :
-                x=saisie();
-                y=saisie();
-                Puissance(x,y);
-                break;
+    System.out.print("Entre choix:");
+     choix = scanner.nextInt();
+    switch (choix){
+        case 1 :
+            x=saisie();
+            y=saisie();
+            Addition(x,y);
+            break;
+        case 2 :
+            x=saisie();
+            y=saisie();
+            Soustraction(x,y);
+            break;
+        case 3 :
+            x=saisie();
+            y=saisie();
+            Multiplication(x,y);
+            break;
+        case 4 :
+            x=saisie();
+            y=saisie();
+            Division(x,y);
+            break;
+        case 5 :
+            x=saisie();
+            y=saisie();
+            Puissance(x,y);
+            break;
+        case 6 :
+            x=saisie();
+            RacineCarrée(x);
+            break;
+        case 8:
+            System.out.println("au revoir !!");
+            break;
+        default:
+            System.out.println("choix invaible !!");
+    }
+}while (choix !=8);
 
-            case 8:
-                System.out.println("au revoir !!");
-                break;
-            default:
-                System.out.println("choix invaible !!");
-        }
-        scanner.close();
+
     }
 }
