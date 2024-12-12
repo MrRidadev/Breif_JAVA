@@ -24,9 +24,20 @@ public class Calculatrice {
         System.out.println("la Puissance de A et B :"+Math.pow( a, b));
         return Math.pow( a, b);
     }
-    static  double RacineCarrée(double a){
+    static  double RacineCarree(double a){
         System.out.println("la Racine carrée de A et B :"+Math.sqrt( a));
         return Math.sqrt( a);
+    }
+    static double Factorielle(double a){
+
+        long factorial = 1;
+
+        for (int i = 1; i <= a; i++) {
+            factorial *= i;
+        }
+        System.out.println("la Factorielle :"+factorial);
+        return factorial;
+
     }
     static void Menu(){
         System.out.println("======== MENU ==========");
@@ -76,7 +87,11 @@ do {
             break;
         case 6 :
             x=saisie();
-            RacineCarrée(x);
+            RacineCarree(x);
+            break;
+        case 7 :
+            x=saisie();
+            Factorielle(x);
             break;
         case 8:
             System.out.println("au revoir !!");
